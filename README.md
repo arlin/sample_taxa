@@ -1,6 +1,14 @@
 sample_taxa
 ===========
 
-#treeforall hackathon project exploring ways to sample species from within a taxon
+treeforall hackathon project: Given the request for a modestly sized tree for a large taxon T, support various useful ways to sample from taxon T
 
-Datafile: idigbioMammalsBionomialsOnly.csv is a download of the mammals in iDigBio ranked by number of records. Includes some mistakes (e.g. Equus sp.)
+## Targets 
+
+1. choose N species randomly from T
+2. choose those species from N that have property A, e.g., has NCBI genome
+3. choose the top N species from T by relevance metric, e.g., counts in iDigBio
+
+## Data files 
+
+There is a README.md in the data directory
