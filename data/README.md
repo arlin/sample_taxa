@@ -19,7 +19,15 @@ contents: download of the mammals in iDigBio ranked by number of records. Includ
 
 format: csv
 
-provenance: obtained via querying the iDigBio API (Andrea).  Processed to remove non-binomials.  
+provenance: obtained via querying the iDigBio API (Andrea).  Processed to remove non-binomials.
+
+## idigbioMammalsBinomialsOnlyNosp_50.csv
+
+contents: download of the mammals in iDigBio ranked by number of records, only includes species with the 50 highest occurrences.
+
+format: csv
+
+provenance: obtained via querying the iDigBio API (Andrea). Processed to remove non-binomials.
 
 ## another file 
 
