@@ -1,0 +1,27 @@
+Arbor - https://arbor.kitware.com/# 
+
+Using the Workflow to get an induced tree from a matrix (OpenTree)
+
+Necessary file(s): csv file (matrix) with "species" as the column header for the species names
+
+Example file: idigbioMammalsBinomialsOnlyNosp_50.csv
+	
+Under the Data Management tab:
+Drag and drop csv file (idigbioMammalsBinomialsOnlyNosp_50.csv) to blue "Browse or drop files" button.
+Click the eye next to OpenTree on the right.
+
+Under the Analysis tab:
+In the "Select analysis" dropdown select the "Workflow to get an induced tree from a matrix (OpenTree)". 
+A new window will open where you can select the .csv file you loaded from the dropdown menu (idigbioMammalsBionomialsOnlyNosp_50.csv), the most recent files that have been loaded will be at the bottom of the list.
+Click blue run button. Window to will have blue outline while it says "Running analysis . . . ", then will change to green window that says "Sucess! Produced the following outputs:"
+The names in that bulleted list will now appear in the data dropdown menus. Each of those outputs is a way to format a tree.
+Click the white close button.
+
+Under the Visualization tab:
+On the "Select visualization" dropdown menu, select "image". On the "data" dropdown menu select "Workflow to get an induced tree from a matrix treePlot".
+Click the blue Update button.
+
+If you want to see which analyses are used in the workflow, click the white Show script button.Each of the analysis modules will be shown and how they feed into each other. You can see the actual script for each of those modules by selecting the analysis from the dropdown menu then clicking the Show script button.
+
+These steps can be repeated with the 
+
