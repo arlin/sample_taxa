@@ -25,7 +25,7 @@ from Bio import Phylo
 import opentreelib
 import matplotlib
 import pylab
-
+import numpy
 
 # use argparse to parse command line arguments, etc.
 parser = argparse.ArgumentParser(description='Generate an induced subtree by random sampling')
@@ -78,8 +78,6 @@ def all_species(OTTid):
             m = matchSpecies.search(node.name)
             if m != None:
                 species[m.group(1) + ' ' + m.group(2)] = int(m.group(3))
-        else:
-            print "Node name is not a string", node.name
 
     for node in tree.get_terminals():
         processNode(node)
@@ -91,8 +89,8 @@ def all_species(OTTid):
 
 # Given a list of OTTids, get a random sample
 def get_random_sample(OTTids_list, length):
-    x = np.asarray(OTTids_list.values()) # convert to numpy array
-    subset = np.random.choice(x,size = length, replace =False)
+    x = numpy.asarray(OTTids_list.values()) # convert to numpy array
+    subset = numpy.random.choice(x,size = length, replace =False)
     return subset.tolist()
 
 # Given a list of OTTids, retrieve the induced subtree
