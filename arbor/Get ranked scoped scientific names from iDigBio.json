@@ -1,0 +1,54 @@
+{
+    "inputs": [
+        {
+            "default": "Mammalia",
+            "format": "text",
+            "type": "string",
+            "description": "Scientific name to search in iDigBio",
+            "name": "scientificname"
+        },
+        {
+            "domain": [
+                "_all",
+                "phylum",
+                "class",
+                "order",
+                "family"
+            ],
+            "description": "Scope of the search",
+            "format": "text",
+            "default": "[object Object]",
+            "type": "string",
+            "name": "scope"
+        },
+        {
+            "default": "50",
+            "format": "number",
+            "type": "number",
+            "description": "Number of names to return",
+            "name": "samplesize"
+        },
+        {
+            "domain": [
+                "top",
+                "random"
+            ],
+            "description": "Indicate if random or top names should be returned",
+            "format": "text",
+            "default": "top",
+            "type": "string",
+            "name": "mode"
+        }
+    ],
+    "script": "import json\nimport urllib2\nimport random\nimport requests\n\nurl = \"http://search.idigbio.org/idigbio/records/_search\"\ndata = {\n    \"query\": {\n\t    \"query_string\" : {\n\t        \"default_field\": scope.lower(),\n       \t\t\"query\" : scientificname.lower()\n    \t}\n    },\n    \"aggregations\": {\n        \"my_agg\": {\n            \"terms\": {\n               \"field\": \"scientificname\",\n               \"size\": samplesize * 10\n            }\n        }\n    }\n}\n\nheaders = {'Content-type': 'application/json', 'Accept': 'text/plain'}\nr = requests.post(url, data=json.dumps(data), headers=headers)\ndata = json.loads(r.text)\n\nuniqKeys = {}\noutrows = []\ncount = 0\n#print data[\"aggregations\"][\"my_agg\"][\"buckets\"]\naggr = data[\"aggregations\"][\"my_agg\"][\"buckets\"]\nif mode == \"random\":\n    random.shuffle(aggr)\nfor item in aggr:\n    parts = item[\"key\"].split()\n    if len(parts) == 2:\n        if not \"sp\" in parts[0] and not \"sp\" in parts[1]:\n            if not (\"?\" in parts[0] or \"?\" in parts[1]):\n                if not (\".\" in parts[0] or \".\" in parts[1]):\n                    if not (\"(\" in parts[0] or \"(\" in parts[1] or \")\" in parts[0] or \")\" in parts[1]):\n                        if item[\"key\"] in uniqKeys:\n                            print \"Warning: already counted\", item[\"key\"], \"parts:\", parts\n                        else:\n                            count = count + 1\n                        uniqKeys[item[\"key\"]] = \"\"\n                        outrows.append({\"species\": item[\"key\"], \"#Occurrences\": item[\"doc_count\"]})\n                        if count == samplesize:\n                            break\n                    \nrankedScientificName = {'fields': [\"species\", \"#Occurrences\"],\n            'rows': outrows}",
+    "mode": "python",
+    "name": "Get ranked scoped scientific names from iDigBio",
+    "outputs": [
+        {
+            "format": "rows",
+            "type": "table",
+            "description": "Table of scientific names ranked according to number of occurrences found in iDigBio",
+            "name": "rankedScientificName"
+        }
+    ]
+}
