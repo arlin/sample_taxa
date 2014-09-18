@@ -25,7 +25,8 @@ from Bio import Phylo
 import opentreelib
 import matplotlib
 import pylab
-
+import numpy as np
+from ete2 import Tree
 
 # use argparse to parse command line arguments, etc.
 parser = argparse.ArgumentParser(description='Generate an induced subtree by random sampling')
@@ -37,11 +38,14 @@ parser.add_argument('-n', dest='ntaxa', type=int,
                    help='No. of taxa in induced subtree')
 parser.add_argument('-d', dest='draw', action='store_true',
                    help='Draw tree')
+parser.add_argument('-f', dest='fmt',
+                   help='Format (pdf,png) (Default: pdf)')
 parser.add_argument('-o', dest='out',
-                   help='Output file name')
-parser.set_defaults(sampling_mode = "random", draw=False)
+                   help='Out prefix')
+parser.set_defaults(sampling_mode = "random", draw=False, fmt="pdf")
 
-#args = parser.parse_args(['-t', 'Mammalia', '-m', 'random', '-n', '30','-d', '-o', 'my_induced_subtree_example.nwk'])
+#args = parser.parse_args(['-t', 'Mammalia', '-m', 'random', '-n', '30','-d', '-o', 'my_induced_subtree_example'])
+#args = parser.parse_args(['-t', 'Mammalia', '-m', 'random', '-n', '10','-d', '-o', 'my_induced_subtree_example_mammalia','-f', 'png'])
 args = parser.parse_args()
 
 # <markdowncell>
@@ -105,13 +109,18 @@ def subtree_species(species_list):
 
 # parameters
 taxon_name = args.taxon
+print(taxon_name)
 mode = args.sampling_mode
+print(mode)
 num = args.ntaxa
-outfile = args.out
+print(num)
+outprefix = args.out
+out_fmt = args.fmt
 
 # <codecell>
 
 my_OTT_id = unique_ott_id(taxon_name)
+print(my_OTT_id)
 my_species = all_species(my_OTT_id)
 
 # <codecell>
@@ -123,16 +132,20 @@ my_induced_subtree = subtree_species(my_subset_species)
 
 # <codecell>
 
-# Write to file
-Phylo.write(my_induced_subtree,outfile,'newick')
+# Write newick to file
 
-# Draw induced subtree - Work in progress. Pipe to a different plotting program.
-if args.draw:
-    Phylo.draw(my_induced_subtree)
-    #pylab.show()
-    #pylab.savefig("fig.png")
-    
+Phylo.write(my_induced_subtree,'{}.nwk'.format(outprefix),'newick')
+
+# Convert to ete2 Tree object 
+
+t = Tree(my_induced_subtree.format('newick')) 
 
 # <codecell>
 
+# Render induced subtree 
+if args.draw:
+    if out_fmt == "png":
+        t.render('{}.png'.format(outprefix), w=800, h=600, units="mm")
+    if out_fmt == "pdf":
+        t.render('{}.pdf'.format(outprefix), w=8000, h=6000, units="mm" )
 
