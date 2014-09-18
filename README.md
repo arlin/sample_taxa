@@ -16,3 +16,7 @@ see the google doc https://docs.google.com/document/d/1E3QIxEYUu4Q6A3Dc_zJUoxb0O
 ## Data files 
 
 There is a README.md in the data directory
+
+## perl files 
+
+There is a README.md in the perl directory.  This contains scripts to obtain the induced subtree for any species in a named taxon that have genomes in NCBI. 
