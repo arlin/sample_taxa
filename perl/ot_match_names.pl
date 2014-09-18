@@ -40,7 +40,7 @@ use Pod::Usage;
 my $email = "arlin\@umd.edu"; 
 
 my ( $names, $help ); 
-my $outfile = "result.json";
+my $outfile = "match_result.json";
 GetOptions(
     "email=s" => \$email,   
     "names=s" => \$names, 
@@ -70,11 +70,13 @@ my $json = `$command`;
 my $result = decode_json($json);
 my @ottIds; 
 
-## test code for working out how to parse this json  
-# print Dumper($result); 
-# print $result->{ 'governing_code' } . "\n"; 
-# my $m_ref = $result->{ 'matched_name_ids' }; 
-# printf( "%s\n", join( ", ", @{ $m_ref } ) ); 
+# let's put this in a log file for debugging purposes 
+open(my $fh, ">", $outfile ) or die "cannot open > $outfile: $!";
+printf( $fh $json ); 
+printf( STDERR "The return from executing the command ($command) is in $outfile\n" ); 
+
+# took me a while to figure out how to parse this json due to all the structure 
+#
 my $r_ref = $result->{ 'results' }; 
 foreach my $h_matches (@{ $r_ref }) { 
 #	print $h_matches->{ 'id' } . "\n"; 

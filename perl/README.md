@@ -7,7 +7,7 @@ There is a final script that carries out the entire workflow
 
 	tree_for_genomes_in_taxon.pl --taxon "Rodentia" 
 	
-or "Carnivora", "Felidae", 
+Other nice examples are "Reptilia", "Carnivora", "Felidae".  Not everything works this well.  
 
 # Contact
 

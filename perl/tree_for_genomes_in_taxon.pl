@@ -43,7 +43,7 @@ my $email = "arlin\@umd.edu";
 my $taxon = "Rodentia"; 
 
 my ( $help ); 
-my $outfile = "results";
+my $outfile = "induced_subtree.nwk";
 
 GetOptions(
     "email=s" => \$email,   
@@ -58,6 +58,8 @@ my $link_script = "./taxids_from_genome_ids.pl";
 my $names_script = "./sci_names_from_taxids.pl"; 
 my $ot_match_script = "./ot_match_names.pl"; 
 my $ot_subtree_script = "./ot_induced_subtree.pl"; 
+
+### invoke the scripts to get a tree 
 
 my $command = "$search_script --email=$email --taxon $taxon";
 my $g_ids_string = `$command`; 
@@ -76,14 +78,19 @@ my $ottIds_string = `$command`;
 chomp($ottIds_string); 
 
 # ot_induced_subtree.pl --ids '633213,796660,292504'
-
 $command = "$ot_subtree_script --ids=\'$ottIds_string\'";
 my $result = `$command`;
 
 # debug 
 # printf("$command\n$result\n"); 
 
-printf("$result\n"); 
+printf("$result"); 
+
+open(my $fh, ">", $outfile ) or die "cannot open > $outfile: $!";
+printf( $fh $result ); 
+
+system( "open $outfile" ); 
+
 # exit; 
 
 

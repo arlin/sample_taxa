@@ -39,7 +39,7 @@ use Pod::Usage;
 #
 
 my ( $ids, $help ); 
-my $outfile = "result.json";
+my $outfile = "induced_subtree_result.json";
 GetOptions(
     "ids=s" => \$ids, 
     "file=s" => \$outfile, 
@@ -67,8 +67,12 @@ my $command = sprintf( "curl -X POST $base_url -H \"$header\" -d \'$body\'" );
 my $json = `$command`; 
 my $result = decode_json($json);
 my $newick = $result->{ 'subtree' }; 
- 
-printf( "%s\n", $newick ); 
 
-# and exit
+# let's put this in a log file for debugging purposes 
+open(my $fh, ">", $outfile ) or die "cannot open > $outfile: $!";
+printf( $fh $json ); 
+printf( STDERR "The return from executing the command ($command) is in $outfile\n" ); 
+
+# output and exit
+printf( "%s\n", $newick ); 
 exit; 
