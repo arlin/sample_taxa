@@ -1,3 +1,16 @@
+# Tree-for-all hackathon, 18 September 2014
+#
+# This is a simple demonstration script with a general function: 
+#
+#  input - a CSV file one of whose columns contains taxon names
+#  output - the same CSV file, with an additional column giving OTT
+#    ids for those names
+#
+# This uses 'opentreelib' (defined in another hackathon repo) to talk to
+# the Open Tree API.
+#
+# Author: Jonathan A. Rees
+
 import csv
 import opentreelib
 import argparse
@@ -8,9 +21,12 @@ argparser.add_argument('-i', dest='inf', help='CSV input file name')
 argparser.add_argument('-o', dest='outf', help='CSV output file name')
 args = argparser.parse_args()
 
-rows = []
+# Read the CSV file.
+# Assumes that there is a header row; TBD: as command line argument
+# implement the case where there is no header row.
 
 header_row = None
+rows = []
 
 with open(args.inf, 'rb') as csvfile:
     reader = csv.reader(csvfile)
@@ -19,26 +35,39 @@ with open(args.inf, 'rb') as csvfile:
     for row in reader:
         rows.append(row)
 
+# Choose the column that contains the names.  For now assume this is
+# column 0; but the column really ought to be chosen by a command line
+# argument, either by position or by column name (in header).
+
 name_column = 0
 
-# Get list of all ids
+# Extract just the taxon names from the table, as a vector, one entry per row.
+
 ids = []
 for row in rows:
     ids.append(row[name_column])
 
-lumps = {}
+# Invoke the Open Tree TNRS service.
+# TBD: consider doing fuzzy matches as well (with a high threshold).  Not
+# clear what the user should do for names that don't uniquely resolve.
 
 tnrs_return = opentreelib.tnrs_match_names(ids, do_approximate_matching=False)
-import pprint
-pprint.PrettyPrinter().pprint(tnrs_return)
-for lump in tnrs_return['results']:
-    lumps[lump['id']] = lump['matches']
+# import pprint
+# pprint.PrettyPrinter().pprint(tnrs_return)
 
-# Add the OTT id as a new column at the right side of the table
+# Process the wad of stuff that the TNRS returned.  First, index the
+# results by taxon name.
+
+name_to_matches = {}
+for lump in tnrs_return['results']:
+    name_to_matches[lump['id']] = lump['matches']
+
+# Now add the OTT id as a new column at the right side of the table.
+
 for row in rows:
     name = row[name_column]
-    if name in lumps:
-        matches = lumps[name]
+    if name in name_to_matches:
+        matches = name_to_matches[name]
         if len(matches) == 1:
             match = matches[0]
             if 'ot:ottId' in match:
@@ -50,6 +79,8 @@ for row in rows:
     else:
         m = '??'
     row.append(m)
+
+# Write the new CSV out to a file.
 
 with open(args.outf, 'wb') as csvfile:
     writer = csv.writer(csvfile)
