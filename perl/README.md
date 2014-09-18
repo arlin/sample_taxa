@@ -1,17 +1,17 @@
 perl code for sample_taxa
 ===========
 
-This is a set of Perl scripts to execute the case of getting a tree for species in a named taxon that have genomes in NCBI genomes.  The scripts all have command-line interfaces.  The first 3 use eutils (NCBI web services) to find genome entries matching a taxon, link those to NCBIs taxonomy database, and get species names.  The second 2 scripts use OpenTree web services to find ott identifiers for the named species, and to get the induced subtree from the list of ott identifiers. 
-
-There is a final script that carries out the entire workflow
+This directory contains Perl scripts to execute the case of getting a tree for species in a named taxon that have genomes in the genomes division of NCBI.  The master script is invoked like this: 
 
 	tree_for_genomes_in_taxon.pl --taxon "Rodentia" 
 	
-Other nice examples are "Reptilia", "Carnivora", "Felidae".  Not everything works this well.  
+Other nice examples are "Reptilia", "Carnivora", "Felidae", "Thermoprotei".  Not everything works this well (Streptophyta, Basidiomycota). 
 
-# Contact
+The master script invokes 5 other scripts.  The first 3 subsidiary scripts use eutils (NCBI web services) to find genome entries matching a taxon, link those to NCBIs taxonomy database, and get species names.  The remaining subsidiary scripts use OpenTree web services to find ott identifiers for the named species, and to get the induced subtree from the list of ott identifiers. 
 
-These are very brittle.  There is no error-checking, so a failure at any step is going to break this.  Bug reports are welcome.  
+# Known issues
+
+Bug reports are welcome-- check the github issues before starting a new one.  See the dependencies below.  These are very brittle.  There is no error-checking, so a failure at any step is going to break this.  We have found many queries that do not succeed when they get to the OpenTree services, for unknown reasons.    
 
 # Scripts 
 
