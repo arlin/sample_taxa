@@ -1,0 +1,19 @@
+Arbor - https://arbor.kitware.com/# 
+
+Using the Workflow to get an induced tree from an iDigBio query (OpenTree)
+
+Under the Data Management tab:
+Click the eye next to OpenTree on the right.
+
+Under the Analysis tab:
+In the Select analysis dropdown select the "Workflow to get an induced tree from an iDigBio query (OpenTree)". Click the blue Setup and run button.
+A new window will open where you can input the taxon you want to query iDigBio for. This will return a list of the first 100 species with the most occrrence records in iDigbio. That output will be used to retrieve an induced tree from Open Tree.
+Click blue run button. Window to will have blue outline while it says "Running analysis . . . ", then will change to green window that says "Sucess! Produced the following outputs:"
+The names in that bulleted list will now appear in the data dropdown menus. Each of those outputs is a way to format a tree.
+Click the white close button.
+
+Under the Visualization tab:
+On the Select visualization dropdown menu, select image. On the data dropdown menu select Workflow to get an induced tree from an iDigBio query treePlot.
+Click the blue Update button.
+
+If you want to see which analyses are used in the workflow, click the white Show script button.Each of the analysis modules will be shown and how they feed into each other. You can see the actual script for each of those modules by selecting the analysis from the dropdown menu then clicking the Show script button.
