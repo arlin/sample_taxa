@@ -9,6 +9,8 @@
 # This uses 'opentreelib' (defined in another hackathon repo) to talk to
 # the Open Tree API.
 #
+# Example: python tnrs_csv.py -i ../data/idigbio_cleaned.csv -o out.csv
+#
 # Author: Jonathan A. Rees
 
 import csv
@@ -31,7 +33,6 @@ rows = []
 with open(args.inf, 'rb') as csvfile:
     reader = csv.reader(csvfile)
     header_row = reader.next()
-    print 'Header', header_row
     for row in reader:
         rows.append(row)
 
