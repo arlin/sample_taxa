@@ -5,7 +5,7 @@ The random_sample script uses the OpenTree resource to get a newick tree of
 a random sample of N species from taxon T as specified by the user.
 
 
-The script calls on the OpenTree functions via the "opentree-intefaces" 
+The script calls on the OpenTree functions via the "opentree-interfaces" 
 opentreelib python library (https://github.com/OpenTreeOfLife/opentree-interfaces/).
 
        1. unique_ott_id(name) [tnrs_match_names]: Retrieves the unique OTTid given a higher taxon 
