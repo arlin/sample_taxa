@@ -78,7 +78,7 @@ def unique_ott_id(name):
 # taxon in the taxonomy.
 
 def all_species(OTTid):
-    treeresult = opentreelib.tree_of_life_subtree(ott_id = OTTid)
+    treeresult = opentreelib.tol_subtree(ott_id = OTTid)
     # Look for names of the form Genus epithet
     tree = Phylo.read(StringIO(treeresult['newick']), 'newick')
 
@@ -108,7 +108,7 @@ def get_random_sample(OTTids_list, length):
 
 # Given a list of OTTids, retrieve the induced subtree
 def subtree_species(species_list):
-    subtreeresult = opentreelib.tree_of_life_induced_subtree(ott_ids = species_list)
+    subtreeresult = opentreelib.tol_induced_subtree(ott_ids = species_list)
     subtree = Phylo.read(StringIO(subtreeresult['subtree']), 'newick')
     return subtree
 
