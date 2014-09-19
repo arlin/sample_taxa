@@ -3,17 +3,25 @@
 
 # <headingcell level=1>
 
-# # Tree-for-all hackathon 16 Sept 2014
+# Tree-for-all hackathon 16 Sept 2014
 
 # <headingcell level=2>
 
-# # git clone git@github.com:arlin/sample_taxa.git 
-# # git clone git@github.com:OpenTreeOfLife/opentree-interfaces.git
-# # sudo pip install BioPython
-# # sudo pip install CStringIO 
-# # sudo pip install matplotlib
-# # sudo pip install numpy
-# # cd sample_taxa
+# Dependencies:
+# sudo pip install BioPython
+# sudo pip install matplotlib
+# sudo pip install numpy
+# git clone https://github.com/OpenTreeOfLife/opentree-interfaces.git
+# git clone https://github.com/arlin/sample_taxa.git 
+
+# On OS X you need to do the following to get the right numpy:
+#   PYTHONPATH=/Library/Python/2.7/site-packages:$PYTHONPATH
+
+# PYTHONPATH=$PWD/opentree-interfaces/python:$PYTHONPATH
+# cd sample_taxa/random_sample
+
+# Test:
+# python random_sample.py -t "Primates" -n 20 -d -o primates-sample.tre
 
 # <codecell>
 

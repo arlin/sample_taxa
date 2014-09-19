@@ -6,8 +6,12 @@
 #  output - the same CSV file, with an additional column giving OTT
 #    ids for those names
 #
-# This uses 'opentreelib' (defined in another hackathon repo) to talk to
-# the Open Tree API.
+# This uses the 'opentreelib' library (originally defined in the
+# OpenTreeOfLife/opentree-interfaces repo in github, but it may have moved in
+# another hackathon repo) to talk to the Open Tree API.  So to use
+# this script, you'll need to get opentreelib.py.  Tested against commit
+# be2602a1, i.e.
+# https://raw.githubusercontent.com/OpenTreeOfLife/opentree-interfaces/be2602a1284cfdf862b0bf678e436f730a048c68/python/opentreelib.py
 #
 # Example: python tnrs_csv.py -i ../data/idigbio_cleaned.csv -o out.csv
 #
