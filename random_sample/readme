@@ -15,9 +15,9 @@ opentreelib python library (https://github.com/OpenTreeOfLife/opentree-interface
 	  	2.2. Each node in the newick tree is processed to extract only nodes 
 		     that are species using a regex match operation. 
        3. get_random_sample: A random sample of these species is then extracted.
-       3. subtree_species [tree_of_life_induced_subtree]: The induced subtree for this random sample 
+       4. subtree_species [tree_of_life_induced_subtree]: The induced subtree for this random sample 
        	  is then obtained using their OTTids.
-       4. The induced subtree is written to file and if '-d' is specified, an image of the tree is
+       5. The induced subtree is written to file and if '-d' is specified, an image of the tree is
           rendered in either pdf or png format. 
 
 
