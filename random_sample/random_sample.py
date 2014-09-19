@@ -108,7 +108,7 @@ def get_random_sample(OTTids_list, length):
 
 # Given a list of OTTids, retrieve the induced subtree
 def subtree_species(species_list):
-    subtreeresult = opentreelib.tol_induced_subtree(ott_ids = species_list)
+    subtreeresult = opentreelib.tol_induced_tree(ott_ids = species_list)
     subtree = Phylo.read(StringIO(subtreeresult['subtree']), 'newick')
     return subtree
 
