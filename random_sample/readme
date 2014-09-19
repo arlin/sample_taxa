@@ -1,0 +1,29 @@
+# random_sample.py 
+# Jonathon Rees and Dilrini De Silva
+
+The random_sample script uses the OpenTree resource to get a newick tree of 
+a random sample of N species from taxon T as specified by the user.
+
+
+The script calls on the OpenTree functions via the "opentree-intefaces" 
+opentreelib python library (https://github.com/OpenTreeOfLife/opentree-interfaces/).
+
+       1. unique_ott_id(name) [tnrs_match_names]: Retrieves the unique OTTid given a higher taxon 
+       	  (e.g. Mammalia specified via the -t flag).  
+       2. all_species(OTTid) [tree_of_life_subtree]: Retrieves the subtree from given the unique OTTid. 
+       	  	2.1. The newick tree is parsed from the returned JSON object. 
+	  	2.2. Each node in the newick tree is processed to extract only nodes 
+		     that are species using a regex match operation. 
+       3. get_random_sample: A random sample of these species is then extracted.
+       3. subtree_species [tree_of_life_induced_subtree]: The induced subtree for this random sample 
+       	  is then obtained using their OTTids.
+       4. The induced subtree is written to file and if '-d' is specified, an image of the tree is
+          rendered in either pdf or png format. 
+
+
+example command line:
+
+python random_sample.py -t Mammalia -m random -n 50 -d -o my_induced_subtree_example -f pdf
+
+
+Use python "random_sample.py -h" for a full list of command line options. 
