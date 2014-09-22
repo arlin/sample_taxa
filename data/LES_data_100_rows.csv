@@ -1,0 +1,101 @@
+Species,Code,Dataset,BIOME,,GF,Decid/E'green,Needle/Broad lf,C3C4,N2-fixer,log LL,log LMA,log Nmass,log Narea,log Gs,log Parea,log Amass,log Aarea
+Adenostoma fasciculatum,1,Ackerly_Jasper,WLAND,,S,E,N,C3,N,1.255272505,2.454,0.069,0.5458,2.3526,-0.4783,1.691,1.145
+Arbutus menziesii,2,Ackerly_Jasper,WLAND,,S,E,B,C3,N,1.17153144,2.188,0.094,0.288,2.1776,-0.735,1.861,1.049
+Arctostaphylos tomentosa,3,Ackerly_Jasper,WLAND,,S,E,B,C3,N,1.346999571,2.145,0.014,0.1706,2.2031,-0.848527,1.876,1.022
+Artemisia californica,4,Ackerly_Jasper,WLAND,,S,D,B,C3,N,0,1.979,0,0,0,0,0,0
+Baccharis pilularis,5,Ackerly_Jasper,WLAND,,S,E,B,C3,N,0.951337519,2.031,0.388,0.4139,2.3277,-0.7931,2.208,1.239
+Ceanothus cuneatus,6,Ackerly_Jasper,WLAND,,S,E,B,C3,Y,1.166908073,2.356,0.255,0.6111,2.4167,-0.6057,2.002,1.358
+Ceanothus oliganthus,7,Ackerly_Jasper,WLAND,,S,E,B,C3,Y,1.036628895,2.081,0.328,0.4176,2.4698,-0.745,2.173,1.254
+Cercocarpus betuloides,8,Ackerly_Jasper,WLAND,,S,E,B,C3,Y,1.068680502,2.138,0.382,0.5313,2.7031,-0.5536,2.249,1.386
+Clematis lasiantha,9,Ackerly_Jasper,WLAND,,V,D,B,C3,N,0,1.874,0,0,0,0,0,0
+Dirca occidentalis,10,Ackerly_Jasper,WLAND,,S,D,B,C3,N,0.597938829,1.754,0.412,0.1612,2.1794,-1.0068,2.13,0.8899
+Eriodictyon californicum,11,Ackerly_Jasper,WLAND,,S,E,B,C3,N,0.957687084,2.251,0.222,0.4761,2.5469,-0.5535,2.017,1.268
+Heteromeles arbutifolia,12,Ackerly_Jasper,WLAND,,S,E,B,C3,N,1.358172882,2.315,0.137,0.452,2.3695,-0.5644,1.774,1.089
+Holodiscus discolor,13,Ackerly_Jasper,WLAND,,S,D,B,C3,N,0.661391959,1.894,0.288,0.1931,2.5505,-0.8262,2.207,1.101
+Lepechinia calycina,14,Ackerly_Jasper,WLAND,,S,D,B,C3,N,0.644530494,2,0.259,0.2593,2.2964,-0.9224,2.098,1.098
+Lonicera hispidula,15,Ackerly_Jasper,WLAND,,V,D,B,C3,N,0,2.032,0,0,0,0,0,0
+Lotus scoparius,16,Ackerly_Jasper,WLAND,,S,D,B,C3,Y,0.301319429,1.984,0.361,0.3184,2.5569,-0.8194,2.35,1.334
+Mimulus aurantiacus,17,Ackerly_Jasper,WLAND,,S,E,B,C3,N,0.876416718,2.049,0.063,0.1269,2.4233,-0.8722,2.089,1.168
+Pickeringia montana,18,Ackerly_Jasper,WLAND,,S,E,B,C3,Y,0,2.181,0,0,0,0,0,0
+Prunus iIlicifolia,19,Ackerly_Jasper,WLAND,,S,E,B,C3,N,1.216775994,2.178,0.311,0.4883,2.1255,-0.6694,1.805,0.9826
+Quercus agrifolia,20,Ackerly_Jasper,WLAND,,S,E,B,C3,N,0,2.292,0,0,0,0,0,0
+Quercus durata,21,Ackerly_Jasper,WLAND,,S,E,B,C3,N,0,2.322,0,0,0,0,0,0
+Rhamnus californica,22,Ackerly_Jasper,WLAND,,S,E,B,C3,N,1.185926459,1.869,0.318,0.1867,2.1889,-0.82,2.163,1.032
+Rhamnus crocea,23,Ackerly_Jasper,WLAND,,S,E,B,C3,N,1.133493287,2.1,0.328,0.4436,2.2832,-0.771,1.995,1.095
+Ribes californicum,24,Ackerly_Jasper,WLAND,,S,D,B,C3,N,0.516557408,1.967,0.349,0.3105,2.1433,-0.9083,2.072,1.038
+Ribes malvaceum,25,Ackerly_Jasper,WLAND,,S,D,B,C3,N,0,1.874,0,0,0,0,0,0
+Sambucus mexicana,26,Ackerly_Jasper,WLAND,,S,D,B,C3,N,0.6245446,1.999,0.404,0.4086,2.5965,-0.7486,2.28,1.279
+Solanum umbelliferum,27,Ackerly_Jasper,WLAND,,S,D,B,C3,N,0,1.903,0,0,0,0,0,0
+Toxicodendron diversiloba,28,Ackerly_Jasper,WLAND,,S,D,B,C3,N,0.615523376,1.901,0.296226287,0.200256629,2.3287,-0.801421121,2.218,1.119
+Cheirodendron tryginum,29,Baruch&Goldstein_Hawaii_High_Old,TEMP_RF,,T,,,C3,N,0,1.952024595,0.075546961,0.027571556,2.269512944,-1.093732896,1.779483589,0.731508184
+Chenopodium oahuense,30,Baruch&Goldstein_Hawaii_High_Old,TEMP_RF,,S,E,,C3,N,0,1.952686184,0.559906625,0.512592809,2.434568904,-0.600155784,2.214926489,1.167612673
+Comprosma ochracea,31,Baruch&Goldstein_Hawaii_High_Old,TEMP_RF,,T,E,,C3,N,0,1.896709528,0.11058971,0.007299239,2.33243846,-1.258192432,2.105197176,1.001906704
+Meterosideros polymorpha pb,32,Baruch&Goldstein_Hawaii_High_Old,TEMP_RF,,T,,,C3,N,0,2.490259984,-0.13667714,0.353582845,2.198657087,-1.509740016,1.16024181,0.650501795
+Myoporum sandwicensis,33,Baruch&Goldstein_Hawaii_High_Old,TEMP_RF,,T,,,C3,N,0,2.16774663,0.11058971,0.27833634,2.436162647,-0.628133388,2.004943852,1.172690482
+Myrsine lessertiana,34,Baruch&Goldstein_Hawaii_High_Old,TEMP_RF,,T,,,C3,N,0,2.19293876,-0.017728767,0.175209993,2.164352856,-1.205001249,1.67127557,0.86421433
+Pelea sp,35,Baruch&Goldstein_Hawaii_High_Old,TEMP_RF,,T,,,C3,N,0,1.818985792,0.113943352,-0.067070856,0,-1.703892954,0,0
+Rhus sandwicensis,36,Baruch&Goldstein_Hawaii_High_Old,TEMP_RF,,T,,,C3,N,0,1.68296097,0.146128036,-0.170910995,2.625312451,-1.413949043,2.533204933,1.216165902
+Rubus hawaiiensis,37,Baruch&Goldstein_Hawaii_High_Old,TEMP_RF,,S,E,,C3,N,0,1.563662398,0.469822016,0.033484414,0,-1.093914921,0,0
+Sophora chrysophylla,38,Baruch&Goldstein_Hawaii_High_Old,TEMP_RF,,T,,,C3,Y,0,2.060181337,0.460897843,0.52107918,2.123851641,-0.763727404,1.828559624,0.888740961
+Styphelia tameiameiae,39,Baruch&Goldstein_Hawaii_High_Old,TEMP_RF,,S,E,,C3,N,0,2.313006434,-0.086186148,0.226820286,0,-1.686993566,0,0
+Vaccinium chalicinum,40,Baruch&Goldstein_Hawaii_High_Old,TEMP_RF,,S,E,,C3,N,0,1.727740557,0.298853076,0.026593633,2.117271296,-0.929836762,1.983813611,0.711554168
+Vaccinium reticulatum,41,Baruch&Goldstein_Hawaii_High_Old,TEMP_RF,,S,E,,C3,N,0,2.228633029,-0.050609993,0.178023036,0,-1.771366971,0,0
+Carex kauaiensis,42,Baruch&Goldstein_Hawaii_High_Rec,TEMP_RF,,G,,,C3,N,0,2.175093529,-0.013228266,0.161865263,0,-1.125936467,0,0
+Dodonaea viscosa,43,Baruch&Goldstein_Hawaii_High_Rec,TEMP_RF,,S,E,B,C3,N,0,2.161339774,0.146128036,0.30746781,0,-0.69253219,0,0
+Dubautia scabra,44,Baruch&Goldstein_Hawaii_High_Rec,TEMP_RF,,S,E,,C3,N,0,1.824720182,-0.091514981,-0.2667948,0,-1.698158564,0,0
+Meterosideros polymorpha pb,45,Baruch&Goldstein_Hawaii_High_Rec,TEMP_RF,,T,,,C3,N,0,2.289797985,-0.065501549,0.224296437,2.615950052,-1.108142023,1.691975333,0.981773319
+Nephrolepsis sp,46,Baruch&Goldstein_Hawaii_High_Rec,TEMP_RF,,F,,,C3,N,0,2.188894393,0.037426498,0.226320891,1.838849091,-0.697162255,0.973072223,0.161966616
+Dicranopteris linearis,47,Baruch&Goldstein_Hawaii_Low_Old,TROP_RF,,F,,,C3,N,0,1.923541612,0.037426498,-0.03903189,0,-1.474398396,0,0
+Heteropogon contortus,48,Baruch&Goldstein_Hawaii_Low_Old,TROP_RF,,G,,B,C4,N,0,1.655293419,0.071882007,-0.272824574,0,-1.303313896,0,0
+Meterosideros polymorpha gl,49,Baruch&Goldstein_Hawaii_Low_Old,TROP_RF,,T,,,C3,N,0,2.151810883,-0.065501549,0.086309334,0,-1.149219113,0,0
+Meterosideros polymorpha pb,50,Baruch&Goldstein_Hawaii_Low_Old,TROP_RF,,T,,,C3,N,0,2.248028425,-0.060480747,0.187547678,2.509202522,-0.973820324,1.793008783,1.041037208
+Myrsine sandwicensis,51,Baruch&Goldstein_Hawaii_Low_Old,TROP_RF,,S,E,,C3,N,0,1.663220167,0.021189299,-0.315590534,0,-1.637809829,0,0
+Nephrolepsis sp,52,Baruch&Goldstein_Hawaii_Low_Old,TROP_RF,,F,,,C3,N,0,1.679832935,0.045322979,-0.274844086,0,-1.27877438,0,0
+Pipturus albidus,53,Baruch&Goldstein_Hawaii_Low_Old,TROP_RF,,T,,,C3,N,0,1.791612396,0.204119983,-0.004267621,2.414973348,-1.305297617,2.356280249,1.147892645
+Psychotria sp,54,Baruch&Goldstein_Hawaii_Low_Old,TROP_RF,,S,E,,C3,N,0,1.846002313,0.117271296,-0.036726391,1.812913357,-1.2509077,1.445588512,0.291590826
+Brussaisia arguta,57,Baruch&Goldstein_Hawaii_Med_Old,TEMP_RF,,S,E,,C3,N,0,1.862994224,0.127104798,-0.009900978,2.281033367,-1.137005776,1.656571277,0.519565501
+Cibotium glaucum,58,Baruch&Goldstein_Hawaii_Med_Old,TEMP_RF,,F,,,C3,N,0,1.778585762,0.220108088,-0.00130615,0,-1.180021553,0,0
+Clermontia montes-loa,59,Baruch&Goldstein_Hawaii_Med_Old,TEMP_RF,,S,E,,C3,N,0,1.509002706,0.45484486,-0.036152434,2.328379603,-1.377053942,1.673126508,0.182129214
+Freycinetia arborea,60,Baruch&Goldstein_Hawaii_Med_Old,TEMP_RF,,H,,,C3,N,0,1.784785571,0.281033367,0.065818938,0,-1.215214429,1.58794237,0.372727941
+Ilex anomala,61,Baruch&Goldstein_Hawaii_Med_Old,TEMP_RF,,T,,,C3,N,0,1.982799656,0.093421685,0.076221342,0,-1.415140352,0,0
+Meterosideros polymorpha gl,62,Baruch&Goldstein_Hawaii_Med_Old,TEMP_RF,,T,,,C3,N,0,2.038626372,0.045322979,0.083949351,2.505149978,-1.116275588,1.477247471,0.515873844
+Meterosideros polymorpha pb,63,Baruch&Goldstein_Hawaii_Med_Old,TEMP_RF,,T,,,C3,N,0,2.308034897,-0.113509275,0.194525622,2.496929648,-1.390935107,1.274028466,0.582063363
+Peperomia sp,64,Baruch&Goldstein_Hawaii_Med_Old,TEMP_RF,,H,,,C3,N,0,1.571039535,0.338456494,-0.090503971,0,-1.349779219,0,0
+Comprosma ernodeoides,65,Baruch&Goldstein_Hawaii_Med_Rec,TEMP_RF,,S,E,,C3,N,0,1.905039998,-0.004364805,-0.099324808,0,-1.316808752,0,0
+Comprosma ochracea,66,Baruch&Goldstein_Hawaii_Med_Rec,TEMP_RF,,S,E,,C3,N,0,1.601209607,0.243038049,-0.155752344,2.301029996,-1.553692353,1.509380103,0.11058971
+Dicranopteris linearis,67,Baruch&Goldstein_Hawaii_Med_Rec,TEMP_RF,,F,,,C3,N,0,2.041866324,-0.017728767,0.024137557,0,-1.259163671,0,0
+Hedyotis centranthoides,68,Baruch&Goldstein_Hawaii_Med_Rec,TEMP_RF,,S,E,,C3,N,0,2.090925599,0.103803721,0.19472932,2.480006943,-1.30701441,1.480783233,0.571708832
+Machaerina mariscoides,69,Baruch&Goldstein_Hawaii_Med_Rec,TEMP_RF,,G,,,C3,N,0,2.350470434,-0.161150909,0.189319525,0,-1.34849957,0,0
+Meterosideros polymorpha gl,70,Baruch&Goldstein_Hawaii_Med_Rec,TEMP_RF,,T,,,C3,N,0,2.197294673,-0.107905397,0.089389276,2.477121255,-1.200645336,1.458803529,0.656098202
+Meterosideros polymorpha pb,71,Baruch&Goldstein_Hawaii_Med_Rec,TEMP_RF,,T,,,C3,N,0,2.560036064,-0.229147988,0.330888076,2.267171728,-1.13893394,1.267171728,0.7930916
+Betula papyrifera,72,Bassow&Bazzaz_PETERSHAM__MA,TEMP_FOR,,T,D,B,C3,N,0,1.995635629,0.402312979,0.397940009,0,0,2.290034611,1.285557309
+Prunus serotina,73,Bassow&Bazzaz_PETERSHAM__MA,TEMP_FOR,,T,D,B,C3,N,0,1.748191501,0.427907864,0.176091259,0,0,2.51851394,1.267171728
+Fraxinus americana,74,Bassow&Bazzaz_PETERSHAM__MA,TEMP_FOR,,T,D,B,C3,N,0,1.963770456,0.358448839,0.322219295,0,0,2,0.963787827
+Quercus rubra,75,Bassow&Bazzaz_PETERSHAM__MA,TEMP_FOR,,T,D,B,C3,N,0,2.041388342,0.405773101,0.447158031,0,0,2.330413773,1.371067862
+Quercus alba,76,Bassow&Bazzaz_PETERSHAM__MA,TEMP_FOR,,T,D,B,C3,N,0,2.004364805,0.527114112,0.531478917,0,0,2.357934847,1.361727836
+Castanea dentata,77,Bassow&Bazzaz_PETERSHAM__MA,TEMP_FOR,,T,,B,C3,N,0,1.763437548,0.412662107,0.176091259,0,0,2.336459734,1.100370545
+Ulmus americana,78,Bassow&Bazzaz_PETERSHAM__MA,TEMP_FOR,,T,D,B,C3,N,0,1.812902499,0.30105171,0.113943352,0,0,2.29666519,1.11058971
+Acer rubrum,79,Bassow&Bazzaz_PETERSHAM__MA,TEMP_FOR,,T,D,B,C3,N,0,2.021180613,0.234086825,0.255272505,0,0,2.089905111,1.11058971
+Acer saccharum,80,Bassow&Bazzaz_PETERSHAM__MA,TEMP_FOR,,T,D,B,C3,N,0,2.008596697,0.221857435,0.230448921,0,0,1.832508913,0.838849091
+Acer pensylvanicum,81,Bassow&Bazzaz_PETERSHAM__MA,TEMP_FOR,,T,D,B,C3,N,0,1.77085592,0.40524388,0.176091259,0,0,2.225309282,0.995635195
+Acalypha skutchii,85,Bongers_et_al_Los_Tuxtlas,TROP_RF,,T,E,,,N,0,1.413466788,0.412124406,-0.174408805,0,-1.258765722,0,0
+Aegiphila costaricensis,86,Bongers_et_al_Los_Tuxtlas,TROP_RF,,T,D,,,N,0,1.634381091,0.190891717,-0.174727192,0,-1.039180632,0,0
+Allophylus camptostachys,89,Bongers_et_al_Los_Tuxtlas,TROP_RF,,T,E,,,N,0,2.031650769,0.052693942,0.084344711,0,-0.860461206,0,0
+Amphitecna tuxtlensis,92,Bongers_et_al_Los_Tuxtlas,TROP_RF,,T,E,,,N,0,1.931777714,0.154119526,0.08589724,0,-1.022117499,0,0
+Astrocaryum mexicanum,99,Bongers_et_al_Los_Tuxtlas,TROP_RF,,T,E,,,N,0,1.873643178,0.222456337,0.096099515,0,-0.924686642,0,0
+Bactris trichophylla,100,Bongers_et_al_Los_Tuxtlas,TROP_RF,,S,E,,,N,0,1.738842077,0.186956335,-0.074201587,0,-1.229749459,0,0
+Brosimum alicastrum,102,Bongers_et_al_Los_Tuxtlas,TROP_RF,,T,D,,,N,0,1.80314648,0.3287872,0.13193368,0,-1.081909105,0,0
+Bursera simaruba,104,Bongers_et_al_Los_Tuxtlas,TROP_RF,,T,D,B,C3,N,0,1.929045006,0.179551791,0.108596797,0,-1.068357013,0,0
+Capparis baducca,109,Bongers_et_al_Los_Tuxtlas,TROP_RF,,T,E,,,N,0,1.748609489,0.213252052,-0.038138459,0,-1.250089578,0,0
+Casearia sylvestris,113,Bongers_et_al_Los_Tuxtlas,TROP_RF,,T,E,,,N,0,1.79816747,0,0,0,-1.275747443,0,0
+Cecropia obtusifolia,115,Bongers_et_al_Los_Tuxtlas,TROP_RF,,T,E,,,N,0,1.894161758,0.343999069,0.238160827,0,-1.020235527,0,0
+Chamaedorea alternans,120,Bongers_et_al_Los_Tuxtlas,TROP_RF,,T,E,,,N,0,1.62049897,0.080265627,-0.299235402,0,-1.229512573,0,0
+Chamaedorea pinnatifrons,124,Bongers_et_al_Los_Tuxtlas,TROP_RF,,T,E,,,N,0,1.612025042,0.24674471,-0.141230249,0,-1.072109528,0,0
+Clarisia biflora,133,Bongers_et_al_Los_Tuxtlas,TROP_RF,,T,E,,,N,0,2.031936258,0.322219295,0.354155553,0,-0.912303278,0,0
+Coccoloba hondurensis,140,Bongers_et_al_Los_Tuxtlas,TROP_RF,,T,E,,,N,0,2.015904879,0,0,0,-1.015612172,0,0
+Cordia megalantha,146,Bongers_et_al_Los_Tuxtlas,TROP_RF,,T,D,,,N,0,1.933536741,0.329397879,0.262934621,0,-0.930218457,0,0
+Croton schiedeanus,155,Bongers_et_al_Los_Tuxtlas,TROP_RF,,T,E,,,N,0,1.8177173,0.282168778,0.099886079,0,-0.99617432,0,0
+Cupania dentata,156,Bongers_et_al_Los_Tuxtlas,TROP_RF,,T,E,,,N,0,2.06072256,0.176669933,0.237392492,0,-0.955200406,0,0
+Cymbopetalum baillonii,158,Bongers_et_al_Los_Tuxtlas,TROP_RF,,T,E,,,N,0,2.042856849,0.119255889,0.162112739,0,-0.634923856,0,0
+Cynometra retusa,159,Bongers_et_al_Los_Tuxtlas,TROP_RF,,T,E,,,Y,0,2.105740977,0.071882007,0.177622985,0,-0.920669399,0,0
+Dendropanax arboreus,165,Bongers_et_al_Los_Tuxtlas,TROP_RF,,T,E,,,N,0,1.97130343,-0.04769199,-0.07638856,0,-0.887246797,0,0
