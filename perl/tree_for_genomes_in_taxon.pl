@@ -10,18 +10,21 @@ tree_for_genomes_in_taxon.pl - get OpenTree phylogeny for species in named taxon
     tree_for_genomes_in_taxon.pl --email EMAIL --taxon TAXON --file FILE
 
     --help, --?         print help message
+    --fuzzy				use approximate matching (off by default)
 
 Where I<FILE> is an optional file name to dump output for troubleshooting. 
 
 Examples:
 
-    tree_for_genomes_in_taxon.pl --email=arlin@umd.edu --taxon Rodentia 
+    tree_for_genomes_in_taxon.pl --email=arlin@umd.edu --taxon Rodentia --file FILE
 
 =head1 DESCRIPTION
 
 This is a wrapper for other scripts that invoke web services (from NCBI and OpenTree) to obtain a phylogeny for a set of species in a given taxon that have genomes in NCBI Genome. 
 
-If no output file is specified, results go into esummary_result.xml.  
+The fuzzy flag sets do_approximate_matching to true when names are matched using OpenTree's TNRS.  
+
+If no output file name is given, the results go in induced_subtree.nwk .
 
 =head1 KNOWN ISSUES
 
@@ -37,27 +40,30 @@ use XML::Simple;
 use Data::Dumper; 
 use Pod::Usage; 
 
-# process command-line arguments 
+# set the paths to each of the scripts we need
 #
-my $email = "arlin\@umd.edu"; 
-my $taxon = "Rodentia"; 
-
-my ( $help ); 
-my $outfile = "induced_subtree.nwk";
-
-GetOptions(
-    "email=s" => \$email,   
-    "taxon=s" => \$taxon, 
-    "file=s" => \$outfile, 
-    "help|?" => \$help
-    ) or pod2usage( "Invalid command-line options." );
-pod2usage() if defined( $help ); 
-
 my $search_script = "./esearch_genomes_by_tax.pl"; 
 my $link_script = "./taxids_from_genome_ids.pl"; 
 my $names_script = "./sci_names_from_taxids.pl"; 
 my $ot_match_script = "./ot_match_names.pl"; 
 my $ot_subtree_script = "./ot_induced_subtree.pl"; 
+
+# process command-line arguments 
+#
+my ( $help ); 
+my $email = "arlin\@umd.edu"; 
+my $taxon = "Rodentia"; 
+my $outfile = "induced_subtree.nwk"; 
+my $fuzzy = 0;
+
+GetOptions(
+    "email=s" => \$email,   
+    "taxon=s" => \$taxon, 
+    "fuzzy!" => \$fuzzy, 
+    "file=s" => \$outfile, 
+    "help|?" => \$help
+    ) or pod2usage( "Invalid command-line options." );
+pod2usage() if defined( $help ); 
 
 ### invoke the scripts to get a tree 
 
@@ -74,6 +80,7 @@ my $names_string = `$command`;
 chomp($names_string); 
 
 $command = "$ot_match_script --names=\'$names_string\'";
+$command .= ( $fuzzy ? " --fuzzy" : "" ); 
 my $ottIds_string = `$command`;
 chomp($ottIds_string); 
 
