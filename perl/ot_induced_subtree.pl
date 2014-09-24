@@ -10,16 +10,21 @@ ot_induced_subtree.pl - get ottIds for named species using OpenTree web services
     ot_induced_subtree.pl --ids "<id1>[,<id2>]*" --file FILE
 
     --help, --?         print help message
-
-Where I<FILE> is an optional file name to dump output for troubleshooting. 
+    --open              invoke system to open file in tree viewer (see below)
 
 Examples:
 
     ot_induced_subtree.pl --ids '633213,796660,292504'  
-
+	perldoc ot_induced_subtree.pl (to read the full docs)
+	
 =head1 DESCRIPTION
 
-This returns the induced subtree for the identified taxa. 
+This is just a wrapper for OpenTree's induced_tree service.  It returns the induced tree for the identified taxa on stdout, and also puts it in a file.  
+
+If no output file name is given, the results go in induced_subtree.nwk.
+
+The "open" flag invokes system( "open \$outfile" ) which will work on a Mac if you have set your Mac to open .nwk files with your installed tree viewer (ctrl-click on .nwk file, choose "get info", choose "open with" and select your viewer, click "change all" to apply to all files with the same extension). 
+
 
 =head1 KNOWN ISSUES
 
@@ -39,10 +44,13 @@ use Pod::Usage;
 #
 
 my ( $ids, $help ); 
-my $outfile = "induced_subtree_result.json";
+my $open = 0; 
+
+my $outfile = "induced_subtree.nwk";
 GetOptions(
     "ids=s" => \$ids, 
     "file=s" => \$outfile, 
+    "open!" => \$open, 
     "help|?" => \$help
     ) or pod2usage( "Invalid command-line options." );
 pod2usage() if defined( $help ); 
@@ -68,10 +76,12 @@ my $json = `$command`;
 my $result = decode_json($json);
 my $newick = $result->{ 'subtree' }; 
 
-# let's put this in a log file for debugging purposes 
+# let's put this in a file 
 open(my $fh, ">", $outfile ) or die "cannot open > $outfile: $!";
-printf( $fh $json ); 
-printf( STDERR "The return from executing the command ($command) is in $outfile\n" ); 
+printf( $fh $newick ); 
+printf( STDERR "The tree from executing the command ($command) is in $outfile\n" ); 
+
+system( "open $outfile" ) if $open;  
 
 # output and exit
 printf( "%s\n", $newick ); 

@@ -11,8 +11,7 @@ tree_for_genomes_in_taxon.pl - get OpenTree phylogeny for species in named taxon
 
     --help, --?         print help message
     --fuzzy				use approximate matching (off by default)
-
-Where I<FILE> is an optional file name to dump output for troubleshooting. 
+    --open				invoke system to open file in tree viewer (see below)
 
 Examples:
 
@@ -23,6 +22,8 @@ Examples:
 This is a wrapper for other scripts that invoke web services (from NCBI and OpenTree) to obtain a phylogeny for a set of species in a given taxon that have genomes in NCBI Genome. 
 
 The fuzzy flag sets do_approximate_matching to true when names are matched using OpenTree's TNRS.  
+
+The "open" flag invokes system( "open \$outfile" ) which will work on a Mac if you have set your Mac to open .nwk files with your installed tree viewer (ctrl-click on .nwk file, choose "get info", choose "open with" and select your viewer, click "change all" to apply to all files with the same extension). 
 
 If no output file name is given, the results go in induced_subtree.nwk .
 
@@ -55,11 +56,13 @@ my $email = "arlin\@umd.edu";
 my $taxon = "Rodentia"; 
 my $outfile = "induced_subtree.nwk"; 
 my $fuzzy = 0;
+my $open = 0; 
 
 GetOptions(
     "email=s" => \$email,   
     "taxon=s" => \$taxon, 
     "fuzzy!" => \$fuzzy, 
+    "open!" => \$open, 
     "file=s" => \$outfile, 
     "help|?" => \$help
     ) or pod2usage( "Invalid command-line options." );
@@ -96,7 +99,7 @@ printf("$result");
 open(my $fh, ">", $outfile ) or die "cannot open > $outfile: $!";
 printf( $fh $result ); 
 
-system( "open $outfile" ); 
+system( "open $outfile" ) if $open;  
 
 # exit; 
 
