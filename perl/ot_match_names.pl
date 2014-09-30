@@ -65,7 +65,7 @@ $names = sprintf( "\"%s\"", join( '","', @names ) );
 
 # construct the URL 
 #
-my $base_url = "http://devapi.opentreeoflife.org/v2/tnrs/match_names"; 
+my $base_url = "http://api.opentreeoflife.org/v2/tnrs/match_names"; 
 my $header = "Content-Type:application/json"; 
 my $body = sprintf( "{\"names\":[%s], \"do_approximate_matching\" : %s }", $names, ( $fuzzy ? "true" : "false" ) ); 
 

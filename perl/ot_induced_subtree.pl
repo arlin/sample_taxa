@@ -60,7 +60,7 @@ $script =~ s#^.*/##;
 
 # construct the command 
 #
-my $base_url = "http://devapi.opentreeoflife.org/v2/tree_of_life/induced_subtree"; 
+my $base_url = "http://api.opentreeoflife.org/v2/tree_of_life/induced_subtree"; 
 my $header = "Content-Type:application/json"; 
 # json: {"ott_ids":[732037, 764828, 238412,...]}
 my $body = sprintf( "{\"ott_ids\":[%s]}", $ids ); 
